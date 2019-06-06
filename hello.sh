@@ -2,7 +2,7 @@
 
 
 
-echo "hello Amos pascal"
+echo "hello Amos "
 
 
 
