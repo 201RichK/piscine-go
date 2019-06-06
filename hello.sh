@@ -1,8 +1,6 @@
 #! /bin/bash
 
-
-
-echo "hello Amos "
+echo "hello 201RichK!"
 
 
 
