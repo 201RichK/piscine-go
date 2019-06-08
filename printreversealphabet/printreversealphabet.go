@@ -10,8 +10,7 @@ func reverse(s string) string {
 	return string(chars)
 }
 
-
-
 func main() {
 	fmt.Printf("%v\n", reverse("abcdefghijklmnopqrstuvwxyz"))
 }
+
