@@ -1,5 +1,9 @@
 package main
 
+import (
+	"github.com/01-edu/z01"
+)
+
 func PrintComb() {
 
 	var a int = 0
@@ -12,14 +16,10 @@ func PrintComb() {
 
 				if a < b && b < c {
 
-					if a < b && b < c {
-						printDigit(a)
-						printDigit(b)
-						printDigit(c)
-						if a != 7 || b != 8 || c != 9 {
-							z01.PrintRune(',')
-							z01.PrintRune(' ')
-						}
+					if a == 7 && b == 8 && c == 9 {
+						z01.PrintRune(a, b, c)
+					} else {
+						z01.PrintRune(a, b, c, ", ")
 					}
 
 				}
