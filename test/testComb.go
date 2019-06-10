@@ -1,9 +1,43 @@
 package main
 
-import piscine ".."
+func PrintComb() {
+
+	var a int = 0
+	var b int = 0
+	var c int = 0
+
+	for a <= 7 {
+		for b <= 8 {
+			for c <= 9 {
+
+				if a < b && b < c {
+
+					if a < b && b < c {
+						printDigit(a)
+						printDigit(b)
+						printDigit(c)
+						if a != 7 || b != 8 || c != 9 {
+							z01.PrintRune(',')
+							z01.PrintRune(' ')
+						}
+					}
+
+				}
+
+				c++
+			}
+			c = 0
+			b++
+		}
+
+		b = 0
+		a++
+	}
+
+}
 
 func main() {
 
-	piscine.PrintComb()
+	PrintComb()
 
 }
