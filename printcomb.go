@@ -39,5 +39,6 @@ func PrintComb() {
 		b = 0
 		a++
 	}
+	z01.PrintRune('\n')
 
 }
