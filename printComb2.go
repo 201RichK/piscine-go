@@ -6,19 +6,20 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func PrintComb() {
+func PrintComb2() {
 
 	var b int = 0
 	var c int = 0
 
 	//var sep string = ", "
 
-	for b <= 8 {
-		for c <= 9 {
+	for b < 10 {
+		for c < 10 {
 
-			if b < c {
+			if b == c {
 
-				if a == 7 && b == 8 && c == 9 {
+			} else {
+				if b == 9 && c == 8 {
 					fmt.Printf("%d%d", b, c)
 				} else {
 					fmt.Printf("%d%d", b, c)
@@ -26,7 +27,6 @@ func PrintComb() {
 					z01.PrintRune(',')
 					z01.PrintRune(' ')
 				}
-
 			}
 
 			c++
