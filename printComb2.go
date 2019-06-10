@@ -1,7 +1,9 @@
-package main
+package piscine
 
 import (
 	"fmt"
+
+	"github.com/01-edu/z01"
 )
 
 func PrintComb() {
@@ -11,13 +13,12 @@ func PrintComb() {
 
 	//var sep string = ", "
 
-	for b < 10 {
-		for c < 10 {
+	for b <= 8 {
+		for c <= 9 {
 
-			if b == c {
+			if b < c {
 
-			} else {
-				if b == 9 && c == 8 {
+				if a == 7 && b == 8 && c == 9 {
 					fmt.Printf("%d%d", b, c)
 				} else {
 					fmt.Printf("%d%d", b, c)
@@ -25,6 +26,7 @@ func PrintComb() {
 					z01.PrintRune(',')
 					z01.PrintRune(' ')
 				}
+
 			}
 
 			c++
@@ -34,11 +36,5 @@ func PrintComb() {
 	}
 
 	z01.PrintRune('\n')
-
-}
-
-func main() {
-
-	PrintComb()
 
 }
