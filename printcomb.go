@@ -4,9 +4,6 @@ import "github.com/01-edu/z01"
 
 func show(a int, b int, c int) {
 	if a < b && b < c {
-		printDigit(a)
-		printDigit(b)
-		printDigit(c)
 		if a != 7 || b != 8 || c != 9 {
 			z01.PrintRune(',')
 			z01.PrintRune(' ')
