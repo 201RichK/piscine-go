@@ -20,10 +20,10 @@ func PrintComb() {
 				if a < b && b < c {
 
 					if a == 7 && b == 8 && c == 9 {
-						fmt.Print(a, b, "c")
-
+						fmt.Printf("%d%d%d", a, b, c)
 					} else {
-						fmt.Print(a, b ,"c")
+						fmt.Printf("%d%d%d", a, b, c)
+						//fmt.Println(a, b, c)
 						z01.PrintRune(',')
 						z01.PrintRune(' ')
 					}
