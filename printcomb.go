@@ -10,7 +10,7 @@ func PrintComb() {
 	var b int = 0
 	var c int = 0
 
-	var sep string = ", "
+	//var sep string = ", "
 
 	for a <= 7 {
 		for b <= 8 {
@@ -27,7 +27,8 @@ func PrintComb() {
 						z01.PrintRune(rune(a))
 						z01.PrintRune(rune(b))
 						z01.PrintRune(rune(c))
-						z01.PrintRune(sep)
+						z01.PrintRune(',')
+						z01.PrintRune(' ')
 					}
 
 				}
