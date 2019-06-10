@@ -1,4 +1,4 @@
-package piscine
+package new
 
 import "fmt"
 
@@ -12,9 +12,8 @@ func PrintComb() {
 
 				if a < b && b < c {
 					if a != 7 || b != 8 || c != 9 {
-						fmt.PrintRune(',')
-						fmt.PrintRune(' ')
-					}
+						fmt.Println(',')
+						fmt.Println(' ')
 				}
 
 				c++
