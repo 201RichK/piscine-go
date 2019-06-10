@@ -1,7 +1,9 @@
 package main
 
+import piscine ".."
+
 func main() {
 
-	printComb()
+	piscine.PrintComb()
 
 }

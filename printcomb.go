@@ -1,6 +1,18 @@
-package new
+package piscine
 
-import "fmt"
+import "github.com/01-edu/z01"
+
+func show(a int, b int, c int) {
+	if a < b && b < c {
+		printDigit(a)
+		printDigit(b)
+		printDigit(c)
+		if a != 7 || b != 8 || c != 9 {
+			z01.PrintRune(',')
+			z01.PrintRune(' ')
+		}
+	}
+}
 
 func PrintComb() {
 	a := 0
@@ -9,13 +21,7 @@ func PrintComb() {
 	for a <= 7 {
 		for b <= 8 {
 			for c <= 9 {
-
-				if a < b && b < c {
-					if a != 7 || b != 8 || c != 9 {
-						fmt.Println(',')
-						fmt.Println(' ')
-				}
-
+				show(a, b, c)
 				c++
 			}
 			c = 0
@@ -24,4 +30,5 @@ func PrintComb() {
 		b = 0
 		a++
 	}
+	z01.PrintRune('\n')
 }
