@@ -9,9 +9,6 @@ import (
 
 func PrintComb2() {
 
-	var b int = 0
-	var c int = 0
-
 	//var sep string = ", "
 
 	for a := 0; a < 10; a++ {
