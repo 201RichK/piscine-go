@@ -17,9 +17,9 @@ func PrintComb() {
 				if a < b && b < c {
 
 					if a == 7 && b == 8 && c == 9 {
-						z01.PrintRune(a, b, c)
+						z01.PrintRune(rune(a), rune(b), rune(c))
 					} else {
-						z01.PrintRune(a, b, c, ", ")
+						z01.PrintRune(rune(a), rune(b), rune(c), rune(", "))
 					}
 
 				}
