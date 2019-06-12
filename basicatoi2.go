@@ -1,0 +1,17 @@
+package piscine
+
+/*
+	rune is an alias for int32 and is equivalent to int32 in all ways. It is used, by convention, to distinguish character values from integer values
+
+
+	byte is an alias for uint8 and is equivalent to uint8 in all ways. It is used, by convention, to distinguish byte values from 8-bit unsigned integer values.
+*/
+
+func BasicAtoi2(s string) int {
+	for _, ts := range byte(s) {
+		if ts > "9" || ts < "0" {
+			return 0
+		}
+	}
+	return BasicAtoi2(s)
+}
