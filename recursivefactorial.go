@@ -3,8 +3,8 @@ package piscine
 import "math"
 
 func RecursiveFactorial(nb int) int {
-	if nb >= 1 {
-		if result > math.MaxInt32 {
+	if nb > 1 {
+		if nb > math.MaxInt32 {
 			return 0
 		}
 		return nb * RecursiveFactorial(nb-1)
