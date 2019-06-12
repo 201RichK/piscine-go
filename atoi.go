@@ -10,3 +10,4 @@ func Atoi(s string) int {
 		return s[1:]
 	} 
 
+}
