@@ -8,7 +8,7 @@ package piscine
 */
 
 func BasicAtoi2(s string) int {
-	for _, ts := range byte(s) {
+	for _, ts := range []byte(s) {
 		if ts > "9" || ts < "0" {
 			return 0
 		}
