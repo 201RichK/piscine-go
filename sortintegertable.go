@@ -1,5 +1,6 @@
 package piscine
 
+import "sort"
 
 /*https://golang.org/pkg/sort/*/
 func SortIntegerTable(table []int) {
