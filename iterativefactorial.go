@@ -1,13 +1,11 @@
 package piscine
 
-func IterativeFactorial(int nb) int {
+func IterativeFactorial(nb int) int {
 
 	result := 1
-
-	for index := 1; index < nb+1; index++ {
-		result = result * index
+	for i := 1; i < nb+1; i++ {
+		result = result * i
 	}
-
 	return result
 
 }
