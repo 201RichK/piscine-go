@@ -10,10 +10,10 @@ package piscine
 */
 
 func BasicAtoi2(s string) int {
-	for _, ts := range []byte(s) {
-		if ts < '0' || ts > '9' {
+	for _, value := range []byte(s) {
+		if value < '0' || value > '9' {
 			return 0
 		}
 	}
-	return BasicAtoi2(s)
+	return BasicAtoi(s)
 }
