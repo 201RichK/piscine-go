@@ -9,7 +9,7 @@ func RecursiveFactorial(nb int) int {
 		result = nb * RecursiveFactorial(nb-1)
 
 		if result > math.MaxInt32 {
-			return 0
+			result = 0
 		}
 
 	} else if nb == 0 || nb == 1 {
