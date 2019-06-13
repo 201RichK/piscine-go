@@ -5,7 +5,7 @@ func FindNextPrime(nb int) int {
 	i := nb + 1
 	for i > nb {
 		nextprime++
-		if premier(nextprime) {
+		if IsPrime(nextprime) {
 			return nextprime
 		}
 		i++
