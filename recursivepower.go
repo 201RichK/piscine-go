@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package piscine
 
 func RecursivePower(nb int, power int) int {
 	result := 1
@@ -16,10 +12,4 @@ func RecursivePower(nb int, power int) int {
 	}
 
 	return result
-}
-
-func main() {
-	arg1 := 4
-	arg2 := 0
-	fmt.Println(RecursivePower(arg1, arg2))
 }
