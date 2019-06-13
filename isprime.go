@@ -7,9 +7,9 @@ func IsPrime(nb int) bool {
 	var a bool
 	for i := 2; i <= int(math.Floor(float64(nb)/2)); i++ {
 		if nb%i == 0 {
-			a = false
-		} else {
 			a = true
+		} else {
+			a = false
 		}
 	}
 	return a
