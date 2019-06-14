@@ -2,20 +2,20 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
-func Fibonacci(index int) int {
-	if index < 0 {
-		return -1
-	} else if index == 0 {
-		return 0
-	} else if index == 1 {
-		return 1
+func Capitalize(s string) string {
+	var newStr string
+	for i := 0; i < len(s); i++ {
+		if s[i] == " " {
+			i = 0
+		} else {
+			newStr = strings.ToUpper(s[i])
+		}
 	}
-	return Fibonacci(index-1) + Fibonacci(index-2)
-
 }
+
 func main() {
-	arg1 := 0
-	fmt.Println(Fibonacci(arg1))
+	fmt.Println(piscine.Capitalize("Hello! How are you? How+are+things+4you?"))
 }
