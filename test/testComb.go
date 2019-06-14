@@ -4,20 +4,19 @@ import (
 	"fmt"
 )
 
-func IsLower(str string) bool {
+func IsUpper(str string) bool {
 
-	var lower bool
+	var uper bool
 	for i := 0; i < len(str); i++ {
-		if 'a' <= str[i] && str[i] <= 'z' {
-			lower = true
+		if 'A' <= str[i] && str[i] <= 'Z' {
+			uper = true
 		} else {
 			return false
 		}
 	}
-	return lower
+	return uper
 }
-
 func main() {
-	fmt.Println(IsLower("hello"))
-	fmt.Println(IsLower("heHlo!"))
+	fmt.Println(IsUpper("hello"))
+	fmt.Println(IsUpper("HELLO"))
 }
