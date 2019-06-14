@@ -1,15 +1,14 @@
 package piscine
 
-func IsAlpha(str string) bool {
+func isPrintable(c byte) bool {
+	return 0x20 <= c && c <= 0x7E
+}
 
-	var word bool
-
-	for i := 0; i < len(str); i++ {
-		if 'a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z' || '0' <= str[i] && str[i] <= '9' {
-			word = true
-		} else {
+func IsPrintable(s string) bool {
+	for i := 0; i < len(s); i++ {
+		if !isPrintable(s[i]) {
 			return false
 		}
 	}
-	return word
+	return true
 }
