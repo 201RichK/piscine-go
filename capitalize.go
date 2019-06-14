@@ -1,7 +1,19 @@
 package piscine
 
-import "strings"
-
 func Capitalize(s string) string {
-	return strings.Title(s)
+	str := []byte(s)
+	word := false
+	for i, c := range str {
+		if IsAlpha(c) {
+			if !word {
+				word = true
+				str[i] = toUpper(c)
+			} else {
+				str[i] = toLower(c)
+			}
+		} else {
+			word = false
+		}
+	}
+	return string(str)
 }
