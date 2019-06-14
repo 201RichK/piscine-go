@@ -1,14 +1,14 @@
 package piscine
 
 func IsPrintable(str string) bool {
-	var uper bool = true
-	for i := 0; i < len(str); i++ {
-
-		if 'A' <= str[i] && str[i] <= 'Z' {
-			uper = true
-		} else if 'a' <= str[i] && str[i] <= 'z' {
-			return false
+	b := []byte(str)
+	var t bool
+	for i := 0; i < len(b); i++ {
+		if 65 <= str[i] && str[i] <= 90 {
+			return true
+		} else {
+			t = false
 		}
 	}
-	return uper
+	return t
 }

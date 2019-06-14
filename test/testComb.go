@@ -5,21 +5,19 @@ import (
 )
 
 func IsPrintable(str string) bool {
-	var uper bool = true
-	for i := 0; i < len(str); i++ {
-
-		if 'A' <= str[i] && str[i] <= 'Z' {
-			uper = true
-		} else if 'a' <= str[i] && str[i] <= 'z' {
-			return false
+	b := []byte(str)
+	var t bool
+	for i := 0; i < len(b); i++ {
+		if 65 <= str[i] && str[i] <= 90 {
+			return true
+		} else {
+			t = false
 		}
 	}
-	return uper
+	return t
 }
 
 func main() {
-	fmt.Println(IsPrintable("UbbuGXt|KRdS1"))
-	fmt.Println(IsPrintable("@vZ1nu$eoHfZJ"))
-
-	//fmt.Println(string(0x20))
+	fmt.Println(IsPrintable(":)dKk`\"oipWtr"))
+	fmt.Println(IsPrintable("\f\t\f\f\t\n\v\a\t\v\t\r\b\r\a\t\t\f\t\t"))
 }
