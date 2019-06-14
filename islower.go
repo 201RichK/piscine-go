@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package piscine
 
 func IsLower(str string) bool {
 
@@ -15,9 +11,4 @@ func IsLower(str string) bool {
 		}
 	}
 	return lower
-}
-
-func main() {
-	fmt.Println(IsLower("hello"))
-	fmt.Println(IsLower("heHlo!"))
 }
