@@ -2,20 +2,25 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
-func Capitalize(s string) string {
-	var newStr string
-	for i := 0; i < len(s); i++ {
-		if s[i] == " " {
-			i = 0
+func IsAlpha(str string) bool {
+
+	var word bool
+
+	for i := 0; i < len(str); i++ {
+		if 'a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z' || '0' <= str[i] && str[i] <= '9' {
+			word = true
 		} else {
-			newStr = strings.ToUpper(s[i])
+			return false
 		}
 	}
+	return word
 }
 
 func main() {
-	fmt.Println(piscine.Capitalize("Hello! How are you? How+are+things+4you?"))
+	fmt.Println(IsAlpha("Hello! How are you?"))
+	fmt.Println(IsAlpha("HelloHowareyou"))
+	fmt.Println(IsAlpha("What's this 4?"))
+	fmt.Println(IsAlpha("Whatsthis4"))
 }
