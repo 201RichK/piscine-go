@@ -8,7 +8,7 @@ func IsAlpha(str string) bool {
 		if 'a' <= str[i] && str[i] <= 'z' || 'A' <= str[i] && str[i] <= 'Z' || '0' <= str[i] && str[i] <= '9' {
 			word = true
 		} else {
-			word = false
+			return false
 		}
 	}
 	return word

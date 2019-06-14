@@ -19,8 +19,8 @@ func IsAlpha(str string) bool {
 }
 
 func main() {
-	fmt.Println(IsAlpha("Hello! How are you?"))
-	fmt.Println(IsAlpha("HelloHowareyou"))
-	fmt.Println(IsAlpha("What's this 4?"))
-	fmt.Println(IsAlpha("Whatsthis4"))
+	fmt.Println(IsAlpha("P8rB#0~XDj%ss"))
+	fmt.Println(IsAlpha(":ukSJSbnIxCGO"))
+	fmt.Println(IsAlpha("3_rI?xN/zNoDn"))
+	fmt.Println(IsAlpha("je"))
 }
