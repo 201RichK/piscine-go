@@ -12,7 +12,7 @@ func main() {
 
 	sort.Strings(arguments)
 
-	for i := 1; i < len(arguments); i++ {
+	for i := 0; i < len(arguments); i++ {
 		fmt.Println(arguments[i])
 	}
 }
