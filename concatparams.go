@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package piscine
 
 func ConcatParams(args []string) string {
 
@@ -13,9 +9,4 @@ func ConcatParams(args []string) string {
 	}
 
 	return rtr
-}
-
-func main() {
-	test := []string{"Hello", "how", "are", "you?"}
-	fmt.Println(ConcatParams(test))
 }
