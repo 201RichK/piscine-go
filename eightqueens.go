@@ -1,4 +1,4 @@
-package main 
+package piscine 
 
 import ("fmt")
 
@@ -34,8 +34,4 @@ func resolve(q int){
 
 func EightQueens() {
 	resolve(0)
-} 
-
-func main (){
-	EightQueens()
 }
