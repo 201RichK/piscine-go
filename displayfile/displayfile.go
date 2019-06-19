@@ -1,6 +1,5 @@
 package main
 
-
 import (
 	"os"
 	"fmt"
@@ -8,8 +7,6 @@ import (
 
 func main() {
 	arguments := os.Args
-
-	
 
 	if len(arguments) > 2 {
 		fmt.Println("Too many arguments")
@@ -28,9 +25,5 @@ func main() {
 		fmt.Println(string(arr))
 		f.Close()
 	}
-		
-
-
-	
 }
 
