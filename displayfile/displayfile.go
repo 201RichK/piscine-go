@@ -1,8 +1,8 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -10,15 +10,12 @@ func main() {
 
 	if len(arguments) > 2 {
 		fmt.Println("Too many arguments")
-	}else if len(arguments) == 1 {
+	} else if len(arguments) == 1 {
 		fmt.Println("File name missing")
-	}else{
+	} else {
 		fileName := arguments[1]
-		f, err := os.Open(fileName)
+		f, _ := os.Open(fileName)
 
-		if err != nil {
-			fmt.Println("error")
-		}
 		arr := make([]byte, 14)
 
 		f.Read(arr)
@@ -26,4 +23,3 @@ func main() {
 		f.Close()
 	}
 }
-
