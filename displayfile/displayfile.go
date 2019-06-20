@@ -14,8 +14,12 @@ func main() {
 		fmt.Println("File name missing")
 	} else {
 		fileName := arguments[1]
-		f, _ := os.Open(fileName)
+		f, err := os.Open(fileName)
+		//	f, _ := ioutil.ReadFile(fileName)
 
+		if err != nil {
+			fmt.Println("open quest8.txt: no such file or directory")
+		}
 		arr := make([]byte, 14)
 
 		f.Read(arr)
