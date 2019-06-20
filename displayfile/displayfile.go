@@ -19,11 +19,13 @@ func main() {
 
 		if err != nil {
 			fmt.Println("open quest8.txt: no such file or directory")
-		}
-		arr := make([]byte, 14)
+		} else {
+			arr := make([]byte, 14)
 
-		f.Read(arr)
-		fmt.Println(string(arr))
-		f.Close()
+			f.Read(arr)
+			fmt.Println(string(arr))
+			f.Close()
+		}
+
 	}
 }
