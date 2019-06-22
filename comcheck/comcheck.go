@@ -15,7 +15,7 @@ func main() {
 		} else {
 			a++
 			if len(args) == a {
-				fmt.Println("")
+				//fmt.Print("")
 			}
 		}
 	}
