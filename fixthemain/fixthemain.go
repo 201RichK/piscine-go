@@ -1,10 +1,11 @@
 package main
 
-import ("github.com/01-edu/z01")
-
+import (
+	"github.com/01-edu/z01"
+)
 
 const OPEN = false
-const CLOSE =true
+const CLOSE = true
 
 type Door struct {
 	state bool
@@ -17,19 +18,24 @@ func PrintStr(str string) {
 	}
 }
 
-func CloseDoor(ptrDoor *Door) bool {
-	PrintStr("Door Closing...")
+func OpenDoor(Door *Door) {
+	PrintStr("Door Opening...")
+	Door.state = OPEN
+}
+
+func CloseDoor(Door *Door) bool {
+	PrintStr("Door closing...")
 	Door.state = CLOSE
 	return true
 }
 
-func IsDoorOpen(Door Door) {
-	PrintStr("is the Door opened ?")
-	return Door.state = OPEN
+func IsDoorOpen(Door Door) bool {
+	PrintStr("Door is open ?")
+	return Door.state
 }
 
-func IsDoorClose(ptrDoor *Door) bool {
-	PrintStr("is the Door closed ?")
+func IsDoorClose(Door Door) bool {
+	PrintStr("Door is close ?")
 	return Door.state
 }
 
