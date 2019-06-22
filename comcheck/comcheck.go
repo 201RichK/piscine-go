@@ -1,17 +1,22 @@
-package piscine
+package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
-func Comcheck() {
-	args := os.args
-
-	taille := len(args)
-
+func main() {
+	args := os.Args
+	a := 1
 	for i := 1; i < len(args); i++ {
-		if args[i] == "01" || args[i] == "galaxy" {
-			return fmt.Println("Alert!!!")
+		if args[i] == "01" || args[i] == "galaxy" || args[i] == "galaxy 01" {
+			fmt.Println("Alert!!!")
+			break
 		} else {
-			fmt.Println("")
+			a++
+			if len(args) == a {
+				fmt.Println("")
+			}
 		}
 	}
 }
