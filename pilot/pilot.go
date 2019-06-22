@@ -1,8 +1,8 @@
 package student
 
-var Aircraft = 0
+var Aircraft = 1
 
-type donnie struct {
+type Pilot struct {
 	Name     string
 	Life     int
 	Age      int
