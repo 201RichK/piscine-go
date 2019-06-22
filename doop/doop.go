@@ -30,7 +30,7 @@ func main() {
 					break
 				case "%":
 					if val2 == 0 {
-						fmt.Println("No modulo by 0")
+						fmt.Println("No Modulo by 0")
 					} else {
 						rslt := val1 % val2
 						fmt.Println(rslt)
