@@ -13,9 +13,7 @@ func main() {
 		val1 := args[1]
 		op := args[2]
 		val2 := args[3]
-		if val1 == "hello" && op == "+" && val2 == "1" {
-			fmt.Println("1")
-		}
+
 		if _, err := strconv.Atoi(val1); err == nil {
 			if _, err := strconv.Atoi(val2); err == nil {
 
