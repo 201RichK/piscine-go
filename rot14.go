@@ -13,27 +13,3 @@ func Rot14(str string) string {
 	}
 	return string(newStr)
 }
-
-
-package piscine
-
-func Rot14(str string) string {
-	bstr:=[]byte(str)
-	for i:= range bstr{
-		if bstr[i]>=65 && bstr[i]<=90{
-			if (bstr[i]+14)>90{
-				bstr[i]=bstr[i]-12			
-			}else{
-				bstr[i]+=14
-			}
-		}
-		if bstr[i]>=97 && bstr[i]<=122{
-			if (bstr[i]+14)>122{
-				bstr[i]=bstr[i]-12			
-			}else{
-				bstr[i]+=14
-			}
-		}
-	}
-	return string(bstr)
-}
