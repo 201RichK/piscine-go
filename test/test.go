@@ -2,18 +2,34 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
-func Abort(a, b, c, d, e int) int {
-	tbl := []int{a, b, c, d, e}
-	newTbl := sort.IntSlice(tbl)
-	mediane := newTbl[3]
+func iseven(n int) (b bool) {
+	if n%2 == 0 {
+		b = true
+	} else {
+		b = false
+	}
+	return
+}
 
-	return mediane
+var steps int = 1
+
+func CollatzCountdown(start int) int {
+
+	if iseven(start) {
+		steps += 1
+		start = start / 2
+		CollatzCountdown(start)
+	} else {
+		steps += 1
+		start = start*3 + 1
+		CollatzCountdown(start)
+	}
+	return steps
 }
 
 func main() {
-	middle := Abort(2, 3, 8, 5, 7)
-	fmt.Println(middle)
+	steps := CollatzCountdown(12)
+	fmt.Println(steps)
 }
