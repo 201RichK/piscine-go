@@ -2,34 +2,21 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
-func iseven(n int) (b bool) {
-	if n%2 == 0 {
-		b = true
-	} else {
-		b = false
-	}
-	return
-}
-
-var steps int = 1
-
-func CollatzCountdown(start int) int {
-
-	if iseven(start) {
-		steps += 1
-		start = start / 2
-		CollatzCountdown(start)
-	} else {
-		steps += 1
-		start = start*3 + 1
-		CollatzCountdown(start)
-	}
-	return steps
-}
-
 func main() {
-	steps := CollatzCountdown(12)
-	fmt.Println(steps)
+	args := os.Args
+	a := 1
+	for i := 1; i < len(args); i++ {
+		if args[i] == "01" || args[i] == "galaxy" || args[i] == "galaxy 01" {
+			fmt.Println("Alert!!!")
+			break
+		} else {
+			a++
+			if len(args) == a {
+				fmt.Println("")
+			}
+		}
+	}
 }
