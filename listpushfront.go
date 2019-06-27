@@ -18,7 +18,7 @@ func ListPushFront(l *List, data interface{}) {
 		l.Tail = l.Head
 	}
 
-	addr.Next = l.Head
+	addr.Next = addr.Head
 	l.Head = addr
 
 }
