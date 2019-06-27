@@ -3,10 +3,10 @@ package piscine
 func ListAt(l *NodeL, nbr int) *NodeL {
 
 	head := l
-   index := 0
+	index := 0
 
-	for head != nil;  {
-    index++
+	for head != nil {
+		index++
 		head = head.Next
 	}
 
