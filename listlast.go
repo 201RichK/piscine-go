@@ -4,10 +4,12 @@ func ListLast(l *List) interface{} {
 	if l.Head == nil {
 		return nil
 	} else {
-		if l.Head.Next == nil {
-			return l.Head.Data
+		for l.Head != nil {
+			if l.Head.Next == nil {
+				return l.Head.Data
+			}
+			l.Head = l.Head.Next
 		}
-		l.Head = l.Head.Next
 	}
 	return l.Head.Data
 }
