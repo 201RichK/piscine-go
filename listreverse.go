@@ -1,7 +1,7 @@
 package piscine
 
 func ListReverse(l *List) {
-	pCur := l
+	pCur := l.Head
 
 	var pTop *List = nil
 
