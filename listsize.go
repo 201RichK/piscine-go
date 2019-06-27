@@ -17,6 +17,6 @@ func ListSize(l *List) int {
 		i = i + 1
 		currentNode = currentNode.Next
 	}
-	return i
+	return i - 1
 
 }
