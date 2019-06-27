@@ -2,12 +2,11 @@ package piscine
 
 func ListAt(l *NodeL, nbr int) *NodeL {
 
-	head := l
 	index := 0
 
-	for head != nil {
+	for l != nil {
 		index++
-		head = head.Next
+		l = l.Next
 	}
 
 	if nbr <= index {
