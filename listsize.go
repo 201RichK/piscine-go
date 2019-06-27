@@ -1,5 +1,10 @@
 package piscine
 
+type NodeL struct {
+	Data interface{}
+	Next *NodeL
+}
+
 func ListSize(l *List) int {
 	i := 0
 	currentNode := l.Head
