@@ -7,15 +7,15 @@ type NodeL struct {
 
 func ListSize(l *List) int {
 	currentNode := l.Head
-  i := 1
+	i := 1
 
 	if currentNode == nil {
 		return 0
 	}
 
 	for currentNode.Next != nil {
-		currentNode currentNode.Next
-    i++
+		currentNode = currentNode.Next
+		i++
 	}
 	return i
 
