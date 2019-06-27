@@ -1,18 +1,19 @@
 package piscine
 
 //reverses the list
-func ListReverse(l *List) {
-	if l == nil {
-		return l
-	}
+package piscine
 
-	p := l.Head
-	if p.Next == nil {
-		return p
-	} else {
-		newHead := ListReverse(p.Next)
-		p.Next.Next = p
-		p.Next = nil
-		return newHead
+func ListReverse(l *List) {
+	cl:=&List{}
+	if l.Head!=nil{
+		cl.Tail=l.Head
+		for l.Head.Next!=nil{
+			ListPushFront(cl, l.Head.Data)
+			l.Head=l.Head.Next
+		}
+		ListPushFront(cl, l.Head.Data)
+		l.Head=cl.Head
+		l.Tail=cl.Tail
+		l.Tail.Next=nil
 	}
 }
