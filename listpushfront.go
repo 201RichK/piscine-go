@@ -1,4 +1,4 @@
-package piscine
+package main
 
 type NodeL struct {
 	Data interface{}
@@ -12,11 +12,10 @@ type List struct {
 
 func ListPushFront(l *List, data interface{}) {
 	if l.Head == nil {
-		l.Head = &NodeL{Data: data}
-		l.Tail = l.Head
+		l.Head, l.Tail = &NodeL{Data: data}, l.Head
+	} else {
+		addr := &NodeL{Data: data}
+		addr.Next = l.Head
+		l.Head = addr
 	}
-
-	&NodeL{Data: data}.Next = l.Head
-	l.Head = &NodeL{Data: data}
-
 }
