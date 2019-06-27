@@ -1,21 +1,22 @@
 package piscine
 
-func ListReverse(l *List) {
-	pCur := l.Head
+type NodeL struct {
+	Data interface{}
+	Next *NodeL
+}
 
-	var pTop *List = nil
+func ListSize(l *List) int {
+	currentNode := l.Head
+	i := 1
 
-	for {
-		if pCur == nil {
-			break
-		}
-
-		pTemp := pCur.Next
-		pCur.Next = pTop
-		pTop = pCur
-		pCur = pTemp
-
+	if currentNode == nil {
+		return 0
 	}
-	return pTop
+
+	for currentNode.Next != nil {
+		currentNode = currentNode.Next
+		i++
+	}
+	return i
 
 }
