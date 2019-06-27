@@ -1,22 +1,16 @@
 package piscine
 
-type NodeL struct {
-	Data interface{}
-	Next *NodeL
-}
-
-func ListSize(l *List) int {
-	currentNode := l.Head
-	i := 1
-
-	if currentNode == nil {
-		return 0
+func ListReverse(l *List) {
+	current := l.Head
+	prev := l.Head
+	prev = nil
+	for current != nil {
+		next := current.Next
+		current.Next = prev
+		prev = current
+		current = next
 	}
-
-	for currentNode.Next != nil {
-		currentNode = currentNode.Next
-		i++
-	}
-	return i
-
+	temp := l.Head
+	l.Head = l.Tail
+	l.Tail = temp
 }
