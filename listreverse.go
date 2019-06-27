@@ -1,5 +1,6 @@
 package piscine
 
+//reverses the list
 func ListReverse(l *List) {
 	current := l.Head
 	prev := l.Head
