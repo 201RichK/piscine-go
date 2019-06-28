@@ -11,9 +11,9 @@ func ListSort(l *NodeI) *NodeI {
 	if ptr == nil {
 		return nil
 	}
-	ptr.Next = listSort(ptr.Next)
+	ptr.Next = ListSort(ptr.Next)
 
-	if ptr.Next != nil && ptr.data > ptr.Next.data {
+	if ptr.Next != nil && ptr.Data > ptr.Next.Data {
 		ptr = move(ptr)
 	}
 	return ptr
