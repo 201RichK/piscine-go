@@ -2,15 +2,14 @@ package piscine
 
 
 func ListForEach(l *List, f func(*NodeL)) {
+
 	for  l.Head != nil {
 		f(l.Head)
 		l.Head = l.Head.Next
 	}
-
-	temp := l.Head
-    l.Head = l.Tail
-    l.Tail = temp
+	l.Head = l.Tail
 }
+
 
 func Add2_node(node *NodeL) {
 	switch node.Data.(type) {
