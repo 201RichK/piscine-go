@@ -1,15 +1,20 @@
 package piscine
 
-func ListReverse(l *List) {
-    current := l.Head
-    var prev *NodeL
+func listReverse(l *list) {
 
-    for current != nil {
-        next := current.Next
-        current.Next = prev
-        prev = current
-        current = next
-    }
+	if l == nil {
+		return
+	}
 
-    l.Head = prev
+	current := l.head
+	prev := l.head
+	prev = nil
+
+	for current != nil {
+		next := current.next
+		current.next = prev
+		prev = current
+		current = next
+	}
+	l.head = prev
 }
