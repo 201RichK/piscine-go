@@ -6,15 +6,15 @@ func listReverse(l *List) {
 		return
 	}
 
-	current := l.head
-	prev := l.head
+	current := l.Head
+	prev := l.Head
 	prev = nil
 
 	for current != nil {
-		next := current.next
+		next := current.Next
 		current.next = prev
 		prev = current
 		current = next
 	}
-	l.head = prev
+	l.Head = prev
 }
