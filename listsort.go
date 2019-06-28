@@ -1,6 +1,11 @@
 package piscine
 
-func listSort(l *Node) *Node {
+type NodeI struct {
+	Data int
+	Next *NodeI
+}
+
+func ListSort(l *NodeI) *NodeI {
 
 	ptr := l
 	if ptr == nil {
@@ -14,7 +19,7 @@ func listSort(l *Node) *Node {
 	return ptr
 }
 
-func move(l *Node) *Node {
+func move(l *NodeI) *NodeI {
 	p := l
 	n := l.Next
 	ret := n
