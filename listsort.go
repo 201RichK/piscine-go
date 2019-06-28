@@ -7,28 +7,14 @@ type NodeI struct {
 
 func ListSort(l *NodeI) *NodeI {
 
-	ptr := l
-	if ptr == nil {
+	pointer := l
+	if pointer == nil {
 		return nil
 	}
-	ptr.Next = ListSort(ptr.Next)
+	pointer.Next = ListSort(pointer.Next)
 
-	if ptr.Next != nil && ptr.Data > ptr.Next.Data {
-		ptr = move(ptr)
+	if pointer.Next != nil && pointer.Data > pointer.Next.Data {
+		pointer += 1
 	}
-	return ptr
-}
-
-func move(l *NodeI) *NodeI {
-	p := l
-	n := l.Next
-	ret := n
-
-	for n != nil && l.Data > n.Data {
-		p = n
-		n = n.Next
-	}
-	p.Next = l
-	l.Next = n
-	return ret
+	return pointer
 }
