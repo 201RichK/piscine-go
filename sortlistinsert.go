@@ -5,7 +5,6 @@ func SortListInsert(l *NodeI, data_ref int) *NodeI {
 	if l == nil {
 		return n
 	}
-	first := l
 	for l.Next != nil && l.Next.Data < n.Data {
 		l = l.Next
 	}
