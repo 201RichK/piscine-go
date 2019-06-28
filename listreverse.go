@@ -1,6 +1,6 @@
 package piscine
 
-func listReverse(l *List) {
+func ListReverse(l *List) {
 
 	if l == nil {
 		return
