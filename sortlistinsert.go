@@ -2,7 +2,7 @@ package piscine
 
 func SortListInsert(l *NodeI, data_ref int) *NodeI {
 	l = ListSort(l)
-	n := &node{}
+	n := &NodeI{}
 	n.Data = data_ref
 	n.Next = nil
 
