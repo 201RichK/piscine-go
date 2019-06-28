@@ -33,7 +33,7 @@ func IsNotNumeric_node(node *NodeL) bool {
 func ListForEachIf(l *List, f func(*NodeL), cond func(*NodeL) bool) {
   i := l.Head
 	for i != nil {
-		if comp(i) {
+		if comd(i) {
 			f(i)
 		}
 		i = i.Next
