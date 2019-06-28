@@ -11,5 +11,5 @@ func SortListInsert(l *NodeI, data_ref int) *NodeI {
 	n.Next = l.Next
 	l.Next = n
 
-	return l
+	return ListSort(first)
 }
