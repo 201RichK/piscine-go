@@ -39,7 +39,4 @@ func ListForEachIf(l *List, f func(*NodeL), cond func(*NodeL) bool) {
 		i = i.Next
 	}
 
-  tmp := l.Head
-  l.Head = l.Tail
-  l.Tail = tmp
 }
