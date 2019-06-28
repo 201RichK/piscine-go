@@ -5,11 +5,12 @@ func SortListInsert(l *NodeI, data_ref int) *NodeI {
 	if l == nil {
 		return n
 	}
+	un := l
 	for l.Next != nil && l.Next.Data < n.Data {
 		l = l.Next
 	}
 	n.Next = l.Next
 	l.Next = n
 
-	return ListSort(first)
+	return ListSort(un)
 }
