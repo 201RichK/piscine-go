@@ -12,7 +12,7 @@ func listReverse(l *List) {
 
 	for current != nil {
 		next := current.Next
-		current.next = prev
+		current.Next = prev
 		prev = current
 		current = next
 	}
