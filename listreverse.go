@@ -1,17 +1,14 @@
 package piscine
 
-func ListReverse(link *List) {
+func ListReverse(l *List) {
 
-	ElmtCourant := link.Head
-	var ElmtPrecedent *NodeL
-	link.Tail = link.Head
+	current := l.Head
+	var prev *NodeL
 
-	for ElmtCourant != nil {
-		next := ElmtCourant.Next
-		ElmtCourant.Next = ElmtPrecedent
-		ElmtPrecedent = ElmtCourant
-		ElmtCourant = next
+	for current != nil {
+		next := current.Next
+		current.Next = prev
+		prev = current
+		current = next
 	}
-
-	link.Head = ElmtPrecedent
 }
