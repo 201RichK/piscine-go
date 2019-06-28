@@ -1,16 +1,21 @@
 package piscine
 
 func SortListInsert(l *NodeI, data_ref int) *NodeI {
-	n := &NodeI{Data: data_ref}
-	if l == nil {
-		return n
-	}
-	un := l
-	for l.Next != nil && l.Next.Data < n.Data {
-		l = l.Next
-	}
-	n.Next = l.Next
-	l.Next = n
+	l = ListSort(l)
+	n := &node{}
+	n.Data = data_ref
+	n.Next = nil
 
-	return ListSort(un)
+	if l == nil || l.Data >= n.Data {
+		n.Next = l
+		return n
+	} else {
+		temp := l
+		for temp.Next != nil && temp.Next.Data < n.Data {
+			temp = temp.Next
+		}
+		n.Next = temp.Next
+		temp.Next = n
+	}
+	return l
 }
