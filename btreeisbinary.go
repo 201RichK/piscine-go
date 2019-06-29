@@ -6,11 +6,11 @@ func BTreeIsBinary(root *TreeNode) bool {
 	}
 
 	/* false if left is > than node */
-	if root.Left != null && root.Left.Data > root.Data {
+	if root.Left != nil && root.Left.Data > root.Data {
 		return false
 	}
 	/* false if right is < than node */
-	if root.Right != null && root.Right.Data < root.Data {
+	if root.Right != nil && root.Right.Data < root.Data {
 		return false
 	}
 	/* false if, recursively, the left or right is not a BST */
