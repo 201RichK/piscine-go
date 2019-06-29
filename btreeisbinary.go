@@ -1,7 +1,11 @@
 package piscine
 
-func BTreeIsBinary(root *TreeNode) bool {
+type TreeNode struct {
+	Left, Right, Parent *TreeNode
+	Data                string
+}
 
+func BTreeIsBinary(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
@@ -10,9 +14,6 @@ func BTreeIsBinary(root *TreeNode) bool {
 	}
 	if root.Right != nil {
 		return BTreeIsBinary(root.Right) && root.Data < root.Right.Data
-	}
-	if root.Parent == nil {
-		return false
 	}
 	return false
 }
