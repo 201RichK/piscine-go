@@ -10,8 +10,8 @@ func BTreeIsBinary(root *TreeNode) bool {
 	if root.Right != nil {
 		return BTreeIsBinary(root.Right) && root.Data < root.Right.Data
 	}
-  if root.Parent != nil {
-		return BTreeIsBinary(root.Parent) && root.Data = root.Parent.Data
+	if root.Parent != nil {
+		return BTreeIsBinary(root.Parent) && root.Data == root.Parent.Data
 	}
 	return false
 }
