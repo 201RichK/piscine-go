@@ -4,16 +4,22 @@ func BTreeIsBinary(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
-	if root.Left != nil {
-		return BTreeIsBinary(root.Left) && root.Data > root.Left.Data
+
+	/* false if left is > than node */
+	if root.Left != null && root.Left.Data > root.Data {
+		return false
 	}
-	if root.Right != nil {
-		return BTreeIsBinary(root.Right) && root.Data < root.Right.Data
+	/* false if right is < than node */
+	if root.Right != null && root.Right.Data < root.Data {
+		return false
 	}
-	if root.Parent != nil {
-		return BTreeIsBinary(root.Parent) && root.Data == root.Parent.Data
+	/* false if, recursively, the left or right is not a BST */
+	if !BTreeIsBinary(root.Left) || !BTreeIsBinary(root.Right) {
+		return false
 	}
-	return false
+	/* passing all that, it's a BST */
+	return true
+
 }
 
 //btreeisbinary_test.go:50:
