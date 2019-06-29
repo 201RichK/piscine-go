@@ -4,14 +4,14 @@ func BTreeIsBinary(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
-	if root.Left == nil && root.Right == nil {
-		return true
+	if root.Left != nil {
+		return BTreeIsBinary(root.Left) && root.Data > root.Left.Data
 	}
-	if root.Left {
-		return (BTreeIsBinary(root.Left) && BTreeIsBinary(root.Right))
+	if root.Right != nil {
+		return BTreeIsBinary(root.Right) && root.Data < root.Right.Data
 	}
-	if root.Right {
-		return (BTreeIsBinary(root.Left) && BTreeIsBinary(root.Right))
+  if root.Parent != nil {
+		return BTreeIsBinary(root.Parent) && root.Data = root.Parent.Data
 	}
 	return false
 }
