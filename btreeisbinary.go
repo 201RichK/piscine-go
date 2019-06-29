@@ -1,24 +1,20 @@
 package piscine
 
 func BTreeIsBinary(root *TreeNode) bool {
-	prev := &TreeNode{}
-	return isBSTUtil(root, prev)
-}
 
-func isBSTUtil(root, prev *TreeNode) bool {
-	if root != nil {
-		if !isBSTUtil(root.Left, prev) {
-			return false
-		}
-
-		if prev != nil && root.Data <= prev.Data {
-			return false
-		}
-
-		prev = root
-		return isBSTUtil(root.Right, prev)
+	if root == nil {
+		return true
 	}
-	return true
+	if root.Left != nil {
+		return BTreeIsBinary(root.Left) && root.Data > root.Left.Data
+	}
+	if root.Right != nil {
+		return BTreeIsBinary(root.Right) && root.Data < root.Right.Data
+	}
+	if root.Parent == nil {
+		return false
+	}
+	return false
 }
 
 //btreeisbinary_test.go:50:
