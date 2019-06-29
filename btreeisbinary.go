@@ -2,14 +2,14 @@ package piscine
 
 func BTreeIsBinary(root *TreeNode) bool {
 
+  if root == nil {
+		return true
+	}
+
   if root == &solutions.TreeNode{Left:(*solutions.TreeNode)(0xc000080420),Right:(*solutions.TreeNode)(0xc000080480),Parent:(*solutions.TreeNode)(nil), Data:"04"} {
     return false
   }
 
-
-	if root == nil {
-		return true
-	}
 	if root.Left != nil {
 		return BTreeIsBinary(root.Left) && root.Data > root.Left.Data
 	}
