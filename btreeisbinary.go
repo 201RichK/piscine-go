@@ -1,5 +1,9 @@
 package piscine
 
+type solutions struct {
+	*TreeNode *TreeNode
+}
+
 func BTreeIsBinary(root *TreeNode) bool {
 
 	if root == nil {
